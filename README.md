@@ -18,6 +18,18 @@ If your file uses external dependencies, you need to include them in the classpa
     export LEINCP=`lein classpath`
     java -cp $LEINCP:mortimer.jar mortimer.main your-file.clj
 
+For example, if your-file.clj contains this code:
+
+    (#(reduce * (drop 1 (range (inc %)))) 5)
+
+The output will look like this:
+
+    Running file test.clj ...
+    TRACED:  (. clojure.lang.Numbers (inc p1__1#)) => 6
+    TRACED:  (range (. clojure.lang.Numbers (inc p1__1#))) => (0 1 2 3 4 5)
+    TRACED:  (drop 1 (range (. clojure.lang.Numbers (inc p1__1#)))) => clojure.lang.LazySeq@1c3e4a2
+    TRACED:  (reduce * (drop 1 (range (. clojure.lang.Numbers (inc p1__1#))))) => 120
+
 ## How It Works
 
 Mortimer analyzes your file using `read-string` and ztellman/riddley's `macroexpand-all`. Then, it walks the source tree with a custom clojure.walk/postwalk extension and adds custom tracing macros around every form in which the first element is a function. After inserting the tracing macros, it simply runs the code using `eval`. 
