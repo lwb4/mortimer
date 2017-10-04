@@ -1,0 +1,3 @@
+TRACED:  (seq "fred") => (\f \r \e \d)
+TRACED:  (apply str (seq "fred")) => "fred"
+TRACED:  (. (apply str (seq "fred")) toUpperCase) => "FRED"

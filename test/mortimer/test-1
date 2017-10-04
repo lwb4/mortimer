@@ -1,0 +1,2 @@
+TRACED:  (. clojure.lang.Numbers (add 2 2)) => 4
+TRACED:  (. clojure.lang.Numbers (add 2 (. clojure.lang.Numbers (add 2 2)))) => 6
