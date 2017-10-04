@@ -40,7 +40,6 @@ If and when you find bugs, please report them in the Issues tab and I will try t
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Lincoln-B
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License version 1.0.
