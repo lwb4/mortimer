@@ -26,7 +26,7 @@ For example, if your-file.clj contains this code:
 
 The output will look like this:
 
-    Running file test.clj ...
+    Running file your-file.clj ...
     TRACED:  (. clojure.lang.Numbers (inc p1__1#)) => 6
     TRACED:  (range (. clojure.lang.Numbers (inc p1__1#))) => (0 1 2 3 4 5)
     TRACED:  (drop 1 (range (. clojure.lang.Numbers (inc p1__1#)))) => clojure.lang.LazySeq@1c3e4a2
