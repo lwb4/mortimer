@@ -4,6 +4,8 @@ This is a tool that can trace every function call in a Clojure file. It is the s
 
 Simply put, you give mortimer a file, and it runs it with a trace in every function call of every form, including inner forms. It's sort of similar to clojure.tools.trace but much more pervasive.
 
+Mortimer is useful when a) you're trying to solve programming problems on 4clojure.com, b) you're trying to understand your code in greater depth, or c) you're trying to understand someone else's code by tracing it's execution.
+
 Special thanks to the many people who answered my questions on Clojurians slack, as well as Bill Piel's [Sayid](https://github.com/bpiel/sayid) which was the initial inspiration for this tool.
 
 ## Usage
